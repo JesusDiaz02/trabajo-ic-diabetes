@@ -89,3 +89,40 @@ print(f'accuracy de train de entrenamiento:{arbol.score(x_train, y_train)}')
 print(f'accuracy de test de entrenamiento:{arbol.score(x_test,y_test)}')
 #accuracy de validacion
 print(f'accuracy de validacion:{arbol.score(x_test_out,y_test_out)}')
+
+
+# seleccionar modelo Naive Bayes
+gnb = GaussianNB()
+
+#entreno el modelo
+gnb.fit(x_train, y_train)
+
+#metricas
+
+print('*'*50)
+print('Naive Bayes')
+
+#accuracy de entrenamiento train
+print(f'accuracy de train de entrenamiento:{gnb.score(x_train, y_train)}')
+#accuracy de entrenamiento test
+print(f'accuracy de test de entrenamiento:{gnb.score(x_test,y_test)}')
+#accuracy de validacion
+print(f'accuracy de validacion:{gnb.score(x_test_out,y_test_out)}')
+
+# seleccionar modelo KNN
+knn = neighbors.KNeighborsClassifier()
+
+#entreno el modelo
+knn.fit(x_train, y_train)
+
+#metricas
+
+print('*'*50)
+print('modelo KNN')
+
+#accuracy de entrenamiento train
+print(f'accuracy de train de entrenamiento:{knn.score(x_train, y_train)}')
+#accuracy de entrenamiento test
+print(f'accuracy de test de entrenamiento:{knn.score(x_test,y_test)}')
+#accuracy de validacion
+print(f'accuracy de validacion:{knn.score(x_test_out,y_test_out)}')
